@@ -51,5 +51,5 @@ document.getElementById("clear-history").addEventListener("click", function () {
 });
 
 document.getElementById("discover-btn").addEventListener("click", function () {
-  window.location.href = "./main.html";
+  window.location.href = "./blog.html";
 });
