@@ -1,5 +1,3 @@
-console.log("Script file is loaded!");
-
 function handleButtonClick(completebtnid, id) {
   document.getElementById(completebtnid).addEventListener("click", function () {
     alert("Board Updated Successfully");
@@ -8,7 +6,6 @@ function handleButtonClick(completebtnid, id) {
     }
 
     const taskAssignedButton = document.getElementById("task-assigned-btn");
-    console.log(taskAssignedButton.innerText);
     const previousValue = Number(taskAssignedButton.innerText);
     if (previousValue > 0) {
       taskAssignedButton.innerText = previousValue - 1;
@@ -84,4 +81,4 @@ const year = currentDate.getFullYear();
 const dateFormat = `${day}, ${month} ${date} ${year}`;
 document.getElementById("current-date").innerText = dateFormat;
 const elementStyle = document.getElementById("current-date");
-elementStyle.className = "text-2xl font-semibold"
+elementStyle.className = "text-2xl font-semibold";

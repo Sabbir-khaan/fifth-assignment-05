@@ -6,6 +6,20 @@
     <title>Fifth Assignment 05</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              poppins: ['"Poppins"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
     <!-- Google Font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +28,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-[#F4F7FF]">
+  <body class="bg-[#F4F7FF] font-poppins">
     <!-- Header Section Start -->
     <header
       class="lg:max-w-[80%] lg:mx-auto lg:mt-6 bg-white p-2 lg:p-6 lg:rounded-2xl"
@@ -44,7 +58,8 @@
             <h1 id="nav-btn-01" class="font-bold text-2xl lg:text-4xl">23</h1>
           </div>
           <div class="bg-[#F4F7FF] p-3 rounded-full">
-            <img id="color-change-btn"
+            <img
+              id="color-change-btn"
               class="h-[1.8rem] lg:h-[2.5rem]"
               src="./images/theme-btn.png"
               alt=""
@@ -78,7 +93,8 @@
               </div>
             </div>
             <div
-              id="discover-btn" class="flex items-center bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-lg gap-6"
+              id="discover-btn"
+              class="flex items-center bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-lg gap-6"
             >
               <img
                 class="ml-4 lg:ml-[2.5rem]"
@@ -96,9 +112,7 @@
               <div class="bg-white p-4 rounded-full">
                 <img src="./images/calender.png" alt="" />
               </div>
-              <div id="current-date">
-                
-              </div>
+              <div id="current-date"></div>
             </div>
           </div>
           <div class="mb-8">
@@ -289,10 +303,6 @@
         </div>
       </section>
       <!-- Discover Something Home Section End -->
-
-      <!-- Discover Something Second tab section Start -->
-
-      <!-- Discover Something Second tab section End -->
     </main>
     <script src="./script/script.js"></script>
   </body>

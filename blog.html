@@ -3,14 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Second Page</title>
+    <title>Blog Page</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              poppins: ['"Poppins"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-[#F4F7FF]">
+  <body class="bg-[#F4F7FF] font-poppins">
+    <!-- Blog page section start -->
     <section class="lg:max-w-[80%] lg:mx-auto mt-2 lg:mt-6 p-2">
       <div class="flex justify-between items-center bg-white p-4 rounded-xl">
         <div class="flex gap-3 justify-center items-center">
-          <img class="h-[2.3rem] lg:h-[3.25rem]" src="./images/logo.png" alt="" />
+          <img
+            class="h-[2.3rem] lg:h-[3.25rem]"
+            src="./images/logo.png"
+            alt=""
+          />
           <div>
             <h1 class="text-2xl lg:text-4xl font-light">
               Dev<span class="font-bold text-2xl lg:text-4xl">Board</span>
@@ -19,7 +47,10 @@
         </div>
 
         <div>
-          <button id="home-page" class="py-2 lg:py-3 px-5 bg-[#3752FD] text-white rounded-xl">
+          <button
+            id="home-page"
+            class="py-2 lg:py-3 px-5 bg-[#3752FD] text-white rounded-xl"
+          >
             Back to Desk
           </button>
         </div>
@@ -31,16 +62,18 @@
           DOM?
         </h1>
         <hr />
-          <div class="mt-4 ml-8 opacity-60">
-            <p class="mb-2 text-lg font-semibold">There are 5 different ways to select an element in DOM</p>
-          <ol>
-            <li>1.  getElementsByClassName Selector</li>
+        <div class="mt-4 ml-8 opacity-60">
+          <p class="mb-2 text-lg font-semibold">
+            There are 5 different ways to select an element in DOM
+          </p>
+          <ol class="pb-3">
+            <li>1. getElementsByClassName Selector</li>
             <li>2. getElementsByTagName Selector</li>
             <li>3. getElementById Selector</li>
             <li>4. querySelector</li>
             <li>5. querySelectorAll</li>
           </ol>
-          </div>
+        </div>
       </div>
       <div class="rounded-lg mb-7 bg-white">
         <h1 class="text-xl font-semibold p-3">
@@ -48,10 +81,12 @@
           textContent ?
         </h1>
         <hr />
-        <ol class="mt-4 ml-8 opacity-60">
+        <ol class="mt-4 ml-8 opacity-60 pb-3">
           <li>1. innerHTML sets and returns the content inside an element</li>
           <li>2. innerText sets and returns the text inside an element</li>
-          <li>3. textContent sets and returns all the text inside an element</li>
+          <li>
+            3. textContent sets and returns all the text inside an element
+          </li>
         </ol>
       </div>
       <div class="rounded-lg mb-7 bg-white">
@@ -60,36 +95,46 @@
         </h1>
         <hr />
         <p class="p-3 opacity-60 ml-6">
-          Event delegation in the DOM is a way to handle events efficiently by adding a single event listener to a parent element instead of multiple child elements. When a child is clicked, the event "bubbles up" to the parent, allowing it to handle the action. This makes code simpler and improves performance.
+          Event delegation in the DOM is a way to handle events efficiently by
+          adding a single event listener to a parent element instead of multiple
+          child elements. When a child is clicked, the event "bubbles up" to the
+          parent, allowing it to handle the action. This makes code simpler and
+          improves performance.
         </p>
       </div>
       <div class="rounded-lg mb-7 bg-white">
-        <h1 class="text-xl font-semibold  p-3">
+        <h1 class="text-xl font-semibold p-3">
           Question-4: What is event bubbling in the DOM?
         </h1>
         <hr />
         <p class="p-3 opacity-60 ml-6">
-          Event bubbling in the DOM means when you click on an element, the event first happens on that element and then moves up to its parent elements. For example, if you click a button inside a div, the button event happens first, then the div event, and so on.
+          Event bubbling in the DOM means when you click on an element, the
+          event first happens on that element and then moves up to its parent
+          elements. For example, if you click a button inside a div, the button
+          event happens first, then the div event, and so on.
         </p>
       </div>
       <div class="mb-7 bg-white rounded-lg">
-        <h1 class="text-xl font-semibold  p-3">
+        <h1 class="text-xl font-semibold p-3">
           Question-5: How do you create, add, and remove elements using
           JavaScript?
         </h1>
         <hr />
-        <div class="ml-8 opacity-60"> 
+        <div class="ml-8 opacity-60">
           <p class="text-lg font-semibold mb-2 mt-4">
-            You can create, Add, and remove element using JavaScript in 3 simple way.
+            You can create, Add, and remove element using JavaScript in 3 simple
+            way.
           </p>
-          <ol>
+          <ol class="pb-3">
             <li>1. Using the .createElement Selector to Create element</li>
-            <li>2. Using the .appendChild Selector to add element </li>
+            <li>2. Using the .appendChild Selector to add element</li>
             <li>3. Using the .removeChild Selector to remove element</li>
           </ol>
         </div>
       </div>
     </section>
+
+    <!-- Blog page section end -->
     <script src="./script/question.js" defer></script>
   </body>
 </html>
